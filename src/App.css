@@ -2,3 +2,8 @@ body {
     font-family: 'Avenir', sans-serif;
     padding: 2rem 4rem;
 }
+
+a {
+    text-decoration: none;
+    color: black;
+}

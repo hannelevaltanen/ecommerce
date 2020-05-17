@@ -4,7 +4,6 @@ import { connect } from 'react-redux';
 import { clearItemFromCart, addItem, removeItem } from '../../redux/cart/cart.actions';
 
 import './checkout-item.styles.scss';
-import checkoutComponent from '../../pages/checkout/checkout.component';
 
 const CheckoutItem = ({ cartItem, clearItem, addItem, removeItem }) => {
 	const { name, imageUrl, price, quantity } = cartItem;
@@ -13,18 +12,18 @@ const CheckoutItem = ({ cartItem, clearItem, addItem, removeItem }) => {
 			<div className="image-container">
 				<img src={imageUrl} alt="item" />
 			</div>
-			<span class="name">{name}</span>
-			<span class="quantity">
+			<span className="name">{name}</span>
+			<span className="quantity">
 				<div className="arrow" onClick={() => removeItem(cartItem)}>
 					&#10094;
 				</div>
-				<spa className="value">{quantity}</spa>
+				<span className="value">{quantity}</span>
 				<div className="arrow" onClick={() => addItem(cartItem)}>
 					&#10095;
 				</div>
 			</span>
-			<span class="price">{price}</span>
-			<div class="remove-button" onClick={() => clearItem(cartItem)}>
+			<span className="price">{price}</span>
+			<div className="remove-button" onClick={() => clearItem(cartItem)}>
 				&#10005;
 			</div>
 		</div>
